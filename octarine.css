@@ -3,18 +3,88 @@ body {
     color: #2D1E40;
     font-family: 'Gentium Book Plus';
     font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
 }
+
+div {
+    padding-block: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+div.headline {
+    flex: 3;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.tagline {
+  flex: 2;
+  border-left: 4px solid #6741D9;
+  padding: 2%;
+  font-size: xx-large;
+}
+
+div.periwinkle {
+    background-color: #DFC7FF;
+}
+
+div.periwinkle p {
+    margin-block-start: 1rem;
+    padding-left: 2%;
+}
+
+div.main-content div {
+    padding-left: 5%;
+}
+
+div.headshot {
+    margin: 8%;
+}
+
+
+
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+}
+
+p.b {
+    font-weight: bold;
+}
+
+p.bi {
+    font-weight: bold;
+    font-style: italic;
+}
+
+p.cta {
+    font-size: xx-large;
+}
+
+p.subtitle {
+    font-size: x-large;
+    font-weight: 700;
+    font-style: italic;
+    margin-block-end: .1rem;
+}
+
+
 
 h1 {
     color: #401B65;
     font-family: 'Amaranth';
     font-size: 3rem;
-    margin-block-start: 2rem;
+    margin-block-start: 0;
     margin-block-end: 0;
 }
+
+h1.headline {
+    font-size: 6rem;
+}
+
 
 h2 {
     color: #401B65;
@@ -22,17 +92,42 @@ h2 {
     font-variant: small-caps;
     font-weight: 400;
     font-size: 2rem;
-    margin-block-start: 1rem;
+    margin-block-start: 0;
     margin-block-end: 0;
 }
+
+h2.serif {
+    font-family: "Gentium Book Plus";
+}
+
 
 h3 {
     color: #6741D9;
     font-style: italic;
     font-weight: 400;
     font-size: 1.75rem;
-    margin-block-start: 1rem;
-    margin-block-end: 0;
+}
+
+
+ul {
+    margin-block: 2rem;
+}
+
+li {
+    padding-left: 2%;
+    margin-left: 2%;
+    margin-block-end: 1.5rem;
+}
+
+
+a {
+    color: #6741D9;
+    font-weight: bold;
+}
+
+
+span.b {
+    font-weight: bold;
 }
 
 span.i {
@@ -40,63 +135,68 @@ span.i {
     font-variant: normal;
 }
 
-span.b {
+span.bi {
     font-weight: bold;
+    font-style: italic;
 }
 
 span.bright {
     color: #6741D9;
 }
 
-h1.headline {
-    font-size: 6rem;
-    margin-block-end: 0;
-}
 
-h2.serif {
-    font-family: "Gentium Book Plus";
-    margin-block-start: 0;
-}
-
-h2.closing {
-    margin-block-start: 0;
-}
-
-p {
-    margin-top: .1rem;
-    margin-block-end: 1rem;
-}
-
-li {
-    margin-top: 0;
-    margin-block-end: .5rem;
-}
-
-ul {
-    margin-top: 0;
-    margin-block-end: .5rem;
-}
-
-p.b {
-    font-weight: bold;
-}
-
-a {
-    color: #6741D9;
-    font-weight: bold;
-}
-
-div.periwinkle {
-    background-color: #DFC7FF;
-    padding-block-start: .5rem;
-    padding-block-end: 1rem;
-    padding-left: 1em;
-    padding-right: 1em;
-}
 
 img.headshot {
     width: 200px;
     border-radius: 12px;
-    margin-bottom: 1rem;
     display: block;
+    flex-shrink: 0;
+}
+
+
+
+.section-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.bio {
+  flex: 1;
+  border-right: 4px solid #6741D9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 3;
+}
+
+.mid-content {
+  flex: 2;
+}
+
+.side-card {
+  flex: 2;
+  background-color: #fff;
+  border-left: 4px solid #6741D9;
+  line-height: 1.5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+}
+
+.side-card li {
+    margin-block-end: .1rem;
+}
+
+.side-card ul {
+    margin-block-start: .1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.emoji {
+    font-size: 1.5rem;
 }
