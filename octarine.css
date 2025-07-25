@@ -213,15 +213,16 @@ img.headshot {
 
 
 .top-nav {
-  background-color: #DFC7FF;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  font-family: 'Amaranth';
-  font-size: 1.1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #DFC7FF;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: 'Amaranth';
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 2rem;
 }
 
 .top-nav a {
