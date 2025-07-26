@@ -38,8 +38,7 @@
             <form name="vent-to-value"
                 method="POST"
                 data-netlify="true"
-                netlify-honeypot="bot-field"
-                action="/personas/">
+                netlify-honeypot="bot-field">
 
                 <!-- Netlify needs this hidden form-name input -->
                 <input type="hidden" name="form-name" value="vent-to-value">
@@ -131,6 +130,10 @@
                 <button type="submit">Send →</button>
             </form>
 
+            <div id="thank-you-message" style="display: none; margin-top: 2rem;">
+                <h2 class="serif">Thanks for your submission.</h2>
+                <p class="pop">Redirecting you to your persona…</p>
+            </div>
         </div>
             
 
@@ -146,6 +149,25 @@
             <a href="#services">Services</a> | 
             <a href="#contact"><span class="pop">Contact</span></a>
         </footer>
+
+        <script>
+            const form = document.forms["vent-to-value"];
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+                fetch("/", {
+                method: "POST",
+                body: formData,
+                }).then(() => {
+                form.style.display = "none";
+                document.getElementById("thank-you-message").style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "/personas";
+                }, 4000);
+                });
+            });
+        </script>
 
     </body>
 </html>
