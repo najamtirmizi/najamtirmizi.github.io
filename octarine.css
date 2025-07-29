@@ -172,9 +172,10 @@ img.headshot {
 }
 
 .bio {
-  flex: 1;
+  flex: 1.2;
   border-right: 4px solid #6741D9;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .main-content {
@@ -182,7 +183,7 @@ img.headshot {
 }
 
 .mid-content {
-  flex: 2;
+  flex: 1.5;
 }
 
 .side-card {
@@ -304,7 +305,6 @@ form div.periwinkle {
 #pain-points {
     display: flex;
     justify-content: center;
-    padding: 4rem 1rem;
 }
 
 #pain-points form {
@@ -331,4 +331,23 @@ form div.periwinkle {
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+.section-flex {
+  scroll-margin-top: 6rem; /* or however tall your nav is */
+}
+
+#trust {
+  align-items: stretch;
+}
+
+.bottom-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.main-content p {
+  margin-top: 0;
 }
